@@ -15,10 +15,12 @@
   --color-dark-7: rgb(89, 90, 99);
   --color-dark-8: rgb(73, 73, 80);
   --color-dark-9: rgb(0, 0, 0);
+  --color-dark-10: rgb(145, 145, 151);
   --color-auxiliary-1: rgb(79, 183, 227);
   --color-auxiliary-2: rgb(188, 189, 192);
   --color-background-1: rgb(107, 157, 184);
   --color-background-2: rgba(237, 238, 242, 0.7);
+  --color-background-3: rgb(178, 206, 219);
   --color-button: rgb(108, 196, 245);
 }
 
@@ -810,20 +812,17 @@ button:focus {
 	width: 100%; 
 	height: 100%;
 	opacity: 0.7;
-	z-index: 9999;
+	z-index: 999;
 }
 
 .popup {
 	position: fixed;
 	top: 20%;
-	left: 50%;
-	padding: 20px;
-	width: 360px;
-	margin-left: -200px;	
+	left: 2.5%;
+  width: 95%;
+  padding: 75px 100px 100px 100px;
 	background: var(--color-light);
-	border: 1px solid orange;
-	border-radius: 4px; 
-	z-index: 99999;
+	z-index: 9999;
 	opacity: 1;	
 }
 
@@ -832,6 +831,160 @@ button:focus {
 	top: 10px;
 	right: 10px;
 }
+
+.tabs-caption {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.tabs-caption::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  width: 100%;
+  border: 1px dashed rgba(107, 157, 184, 0.5);
+}
+
+.caption-elem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  background-color: var(--color-light);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* .caption-elem::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  width: 50%;
+  border: 1px dashed rgba(107, 157, 184, 0.5);
+}
+ */
+
+
+.caption-elem.active {
+  flex-direction: row;
+  padding-top: 0;
+}
+
+.caption-elem__icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--color-background-1);
+  border-radius: 50%;
+}
+
+.caption-elem__icon--done {
+  width: 20px;
+  height: 20px;
+}
+
+.caption-elem__icon--done::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/icon--check-mark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.caption-elem .caption-elem__icon {
+  width: 20px;
+  height: 20px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-light);
+  background-color: var(--color-background-3);
+}
+
+.caption-elem.active .caption-elem__icon {
+  width: 70px;
+  height: 70px;
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 25px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.caption-elem.active .caption-elem__icon::after {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 0.5px dashed rgba(107, 157, 184, 0.7);
+  border-radius: 50%;
+}
+
+.caption-elem.active .caption-elem__icon span {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.caption-elem .caption-elem__icon span {
+  display: none;
+}
+
+.caption-elem__text {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 160%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-dark-1);
+}
+
+.caption-elem.active .caption-elem__text {
+  padding-top: 0;
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-dark-1);
+}
+
+.caption-elem .caption-elem__text {
+  color: var(--color-dark-10);
+}
+
+.caption-elem .caption-elem__text.caption-elem__text--done {
+  color: var(--color-dark-1);
+}
+
+.tabs__content {
+	display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+	display: block; /* по умолчанию показываем нужный блок */
+}
+
+
 
 .page__carousel {
   position: relative;
@@ -1021,6 +1174,8 @@ input[type="text"]::placeholder {
   line-height: 160%;
   color: var(--color-dark-4);
 }
+
+
 
 
 
