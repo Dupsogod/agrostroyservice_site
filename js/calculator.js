@@ -243,32 +243,48 @@ $('.v--non-active').click(function () {
 });
 
 
+// slider switch
+
+$('.tabs .button-tab').on('click', function(){
+	var local_id = $(this).attr('data-tab'); 
+	if (!$(this).hasClass('button-tab--active')) {
+		$(this).siblings().removeClass('button-tab--active');
+		$(this).addClass('button-tab--active');
+	};
+
+	if (!$('#' + local_id).hasClass('page__carousel--active')) {
+		$('#' + local_id).siblings().removeClass('page__carousel--active');
+		$('#' + local_id).addClass('page__carousel--active');
+	}
+});
+
+
 $('#activeImageOne').click(function() {
-	$('#imageOne').addClass("v--non-active__image--active");
-	$('#imageTwo').removeClass("v--non-active__image--active");
-	$('#imageThree').removeClass("v--non-active__image--active");
-	$('#imageFour').removeClass("v--non-active__image--active");
+	$('.imageOne').addClass("v--non-active__image--active");
+	$('.imageTwo').removeClass("v--non-active__image--active");
+	$('.imageThree').removeClass("v--non-active__image--active");
+	$('.imageFour').removeClass("v--non-active__image--active");
 });
 
 $('#activeImageTwo').click(function() {
-	$('#imageOne').removeClass("v--non-active__image--active");
-	$('#imageTwo').addClass("v--non-active__image--active");
-	$('#imageThree').removeClass("v--non-active__image--active");
-	$('#imageFour').removeClass("v--non-active__image--active");
+	$('.imageOne').removeClass("v--non-active__image--active");
+	$('.imageTwo').addClass("v--non-active__image--active");
+	$('.imageThree').removeClass("v--non-active__image--active");
+	$('.imageFour').removeClass("v--non-active__image--active");
 });
 
 $('#activeImageThree').click(function() {
-	$('#imageOne').removeClass("v--non-active__image--active");
-	$('#imageTwo').removeClass("v--non-active__image--active");
-	$('#imageThree').addClass("v--non-active__image--active");
-	$('#imageFour').removeClass("v--non-active__image--active");
+	$('.imageOne').removeClass("v--non-active__image--active");
+	$('.imageTwo').removeClass("v--non-active__image--active");
+	$('.imageThree').addClass("v--non-active__image--active");
+	$('.imageFour').removeClass("v--non-active__image--active");
 });
 
 $('#activeImageFour').click(function() {
-	$('#imageOne').removeClass("v--non-active__image--active");
-	$('#imageTwo').removeClass("v--non-active__image--active");
-	$('#imageThree').removeClass("v--non-active__image--active");
-	$('#imageFour').addClass("v--non-active__image--active");
+	$('.imageOne').removeClass("v--non-active__image--active");
+	$('.imageTwo').removeClass("v--non-active__image--active");
+	$('.imageThree').removeClass("v--non-active__image--active");
+	$('.imageFour').addClass("v--non-active__image--active");
 });
 
 
