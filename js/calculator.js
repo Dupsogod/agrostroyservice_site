@@ -252,9 +252,9 @@ $('.tabs .button-tab').on('click', function(){
 		$(this).addClass('button-tab--active');
 	};
 
-	if (!$('#' + local_id).hasClass('page__carousel--active')) {
-		$('#' + local_id).siblings().removeClass('page__carousel--active');
-		$('#' + local_id).addClass('page__carousel--active');
+	if (!$('#' + local_id).hasClass('active')) {
+		$('#' + local_id).siblings().removeClass('active');
+		$('#' + local_id).addClass('active');
 	}
 });
 
