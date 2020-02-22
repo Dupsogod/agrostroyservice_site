@@ -18,18 +18,18 @@
 
 <body>
 
-	<div class="page page--form-calculator">
+	<section class="section section--form-calculator">
 		<div class="step" id="step-map">
-			<div class="page-column">
-				<header class="page-header page-header--column page-header--padding">
-					<div class="page-header__text">
-						<div class="page__title page__title--white">
+			<div class="section-column">
+				<header class="section-header section-header--column section-header--padding">
+					<div class="section-header__text">
+						<div class="section__title section__title--white">
 							Работаем более<br>
 							чем в 20 регионах<br>
 							Росии
 						</div>
 					</div>
-					<div class="page-column__content column-content">
+					<div class="section-column__content column-content">
 						<div class="column-content__elem">
 							добросовестно
 						</div>
@@ -42,15 +42,16 @@
 					</div>
 				</header>
 
-				<div class="page-column__footer">
-					*Кликните на свой регион и получите детальный расчет строительства здания из металлоконструкций под ключ
+				<div class="section-column__footer">
+					*Кликните на свой регион и получите детальный расчет строительства здания из металлоконструкций под
+					ключ
 				</div>
 			</div>
 
-			<div class="page-column page-column--map tabs">
+			<div class="section-column section-column--map tabs">
 				<div class="map-block map-block--dark">
 					<svg viewBox="0 0 702 771" class="map" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g data-check="Rostov" class="map__Rostov inputChecked region popup-open">
+						<g data-check="Rostov" class="map__Rostov inputChecked region">
 							<circle class="region__marker" cx="140.488" cy="616.834" r="12" />
 							<circle class="region__point" cx="140.488" cy="616.834" r="6" />
 							<text x="90" y="646" class="region__town">Ростов-на-Дону</text>
@@ -1681,41 +1682,41 @@
 			</div>
 		</div>
 
-		<div class="step step--form-calcilator" id="form-calculator">
+		<div class="step step--form-calcilator" id="form-calculator" style="display: none">
 			<nav class="tabs-caption">
-				<div class="tabs-caption__elem caption-elem popup-close">
+				<div class="tabs-caption__elem caption-elem backMap">
 					<div class="caption-elem__icon caption-elem__icon--done"></div>
 					<div class="caption-elem__text caption-elem__text--done">Выбор региона</div>
 				</div>
-				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-2">
+				<div class="tabs-caption__elem caption-elem buttonSwitch active" data-tab="step-2" id="active-tab-1">
 					<div class="caption-elem__icon">
 						2
 						<span>шаг</span>
 					</div>
 					<div class="caption-elem__text">Размеры и тип сооружения</div>
 				</div>
-				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-3">
+				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-3" id="active-tab-2">
 					<div class="caption-elem__icon">
 						3
 						<span>шаг</span>
 					</div>
 					<div class="caption-elem__text">Фундамент</div>
 				</div>
-				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-4">
+				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-4" id="active-tab-3">
 					<div class="caption-elem__icon">
 						4
 						<span>шаг</span>
 					</div>
 					<div class="caption-elem__text">Стены</div>
 				</div>
-				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-5">
+				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-5" id="active-tab-4">
 					<div class="caption-elem__icon">
 						5
 						<span>шаг</span>
 					</div>
 					<div class="caption-elem__text">кровля</div>
 				</div>
-				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-6">
+				<div class="tabs-caption__elem caption-elem buttonSwitch" data-tab="step-6" id="active-tab-5">
 					<div class="caption-elem__icon">
 						6
 						<span>итог</span>
@@ -1724,8 +1725,8 @@
 				</div>
 			</nav>
 
-			<form action="#" name="calculator" class="calculator">
-				<div class="step-form" id="step-2">
+			<form action="#step-2" name="calculator" class="calculator">
+				<div class="step-form active" id="step-2">
 					<header class="step-form__header">
 						Выберете тип сооружения
 					</header>
@@ -1783,17 +1784,20 @@
 								</div>
 								<div class="button-tab button-tab--form-min inputChecked buttonSwitch"
 									data-check="agricultural-cowshed" data-tab="image-cowshed">
-									<input type="radio" id="agricultural-cowshed" name="type-of-agricultural" value="cowshed">
+									<input type="radio" id="agricultural-cowshed" name="type-of-agricultural"
+										value="cowshed">
 									коровник
 								</div>
 								<div class="button-tab button-tab--form-min inputChecked buttonSwitch"
 									data-check="agricultural-henhouse" data-tab="image-henhouse">
-									<input type="radio" id="agricultural-henhouse" name="type-of-agricultural" value="henhouse">
+									<input type="radio" id="agricultural-henhouse" name="type-of-agricultural"
+										value="henhouse">
 									птичник
 								</div>
 							</div>
 							<div class="step-form__row step-form__row--image">
-								<img src="images/image--granary.png" class="image-building active" id="image-granary" alt="">
+								<img src="images/image--granary.png" class="image-building active" id="image-granary"
+									alt="">
 								<img src="images/image--granary.png" class="image-building" id="image-cowshed" alt="">
 								<img src="images/image--granary.png" class="image-building" id="image-henhouse" alt="">
 							</div>
@@ -1805,25 +1809,28 @@
 									<header class="input-block__header">
 										Высота стен
 									</header>
-									<input type="number" id="js-amount-input-agriculturalHeight" class="input-block__item" value="3" min="3"
+									<input type="number" id="js-amount-input-agriculturalHeight"
+										class="input-block__item" value="3" min="3" max="12" step="0.3">
+									<input type="range" id="js-amount-range-agriculturalHeight" value="3" min="3"
 										max="12" step="0.3">
-									<input type="range" id="js-amount-range-agriculturalHeight" value="3" min="3" max="12" step="0.3">
 								</div>
 								<div>
 									<header class="input-block__header">
 										Ширина
 									</header>
-									<input type="number" id="js-amount-input-agriculturalWidth" class="input-block__item" value="3" min="3"
+									<input type="number" id="js-amount-input-agriculturalWidth"
+										class="input-block__item" value="3" min="3" max="50" step="1">
+									<input type="range" id="js-amount-range-agriculturalWidth" value="3" min="3"
 										max="50" step="1">
-									<input type="range" id="js-amount-range-agriculturalWidth" value="3" min="3" max="50" step="1">
 								</div>
 								<div>
 									<header class="input-block__header">
 										Длина
 									</header>
-									<input type="number" id="js-amount-input-agriculturalLength" class="input-block__item" value="9" min="9"
+									<input type="number" id="js-amount-input-agriculturalLength"
+										class="input-block__item" value="9" min="9" max="120" step="1">
+									<input type="range" id="js-amount-range-agriculturalLength" value="9" min="9"
 										max="120" step="1">
-									<input type="range" id="js-amount-range-agriculturalLength" value="9" min="9" max="120" step="1">
 								</div>
 							</div>
 
@@ -1835,57 +1842,66 @@
 					<div class="step-form__row step-form__row--second" id="step-industry">
 						<div class="step-form__column">
 							<div class="step-form__row">
-								<div class="button-tab button-tab--form-min inputChecked buttonSwitch active" data-check="industry-storage" data-tab="image-storage">
+								<div class="button-tab button-tab--form-min inputChecked buttonSwitch active"
+									data-check="industry-storage" data-tab="image-storage">
 									<input type="radio" id="industry-storage" name="type-of-industry" value="storage">
 									склад
 								</div>
-								<div class="button-tab button-tab--form-min inputChecked buttonSwitch" data-check="industry-hangar" data-tab="image-hangar">
+								<div class="button-tab button-tab--form-min inputChecked buttonSwitch"
+									data-check="industry-hangar" data-tab="image-hangar">
 									<input type="radio" id="industry-hangar" name="type-of-industry" value="hangar">
 									ангар
 								</div>
-								<div class="button-tab button-tab--form-min inputChecked buttonSwitch" data-check="industry-factory" data-tab="image-factory">
+								<div class="button-tab button-tab--form-min inputChecked buttonSwitch"
+									data-check="industry-factory" data-tab="image-factory">
 									<input type="radio" id="industry-factory" name="type-of-industry" value="factory">
 									цех
 								</div>
 								<div class="button-tab button-tab--form-min inputChecked buttonSwitch"
 									data-check="industry-other-industrial" data-tab="image-industrial">
-									<input type="radio" id="industry-other-industrial" name="type-of-industry" value="other-industrial">
+									<input type="radio" id="industry-other-industrial" name="type-of-industry"
+										value="other-industrial">
 									другое
 								</div>
 							</div>
 							<div class="step-form__row step-form__row--image">
-								<img src="images/image--granary.png" class="image-building active" id="image-storage" alt="">
+								<img src="images/image--granary.png" class="image-building active" id="image-storage"
+									alt="">
 								<img src="images/image--granary.png" class="image-building" id="image-hangar" alt="">
 								<img src="images/image--granary.png" class="image-building" id="image-factory" alt="">
-								<img src="images/image--granary.png" class="image-building" id="image-industrial" alt="">
+								<img src="images/image--granary.png" class="image-building" id="image-industrial"
+									alt="">
 							</div>
 						</div>
-						
+
 						<div class="step-form__column step-form__column--range">
 							<div class="input-block">
 								<div>
 									<header class="input-block__header">
 										Высота стен
 									</header>
-									<input type="number" id="js-amount-input-industryHeight" class="input-block__item" value="3" min="3"
-										max="12" step="0.3">
-									<input type="range" id="js-amount-range-industryHeight" value="3" min="3" max="12" step="0.3">
+									<input type="number" id="js-amount-input-industryHeight" class="input-block__item"
+										value="3" min="3" max="12" step="0.3">
+									<input type="range" id="js-amount-range-industryHeight" value="3" min="3" max="12"
+										step="0.3">
 								</div>
 								<div>
 									<header class="input-block__header">
 										Ширина
 									</header>
-									<input type="number" id="js-amount-input-industryWidth" class="input-block__item" value="3" min="3"
-										max="50" step="1">
-									<input type="range" id="js-amount-range-industryWidth" value="3" min="3" max="50" step="1">
+									<input type="number" id="js-amount-input-industryWidth" class="input-block__item"
+										value="3" min="3" max="50" step="1">
+									<input type="range" id="js-amount-range-industryWidth" value="3" min="3" max="50"
+										step="1">
 								</div>
 								<div>
 									<header class="input-block__header">
 										Длина
 									</header>
-									<input type="number" id="js-amount-input-industryLength" class="input-block__item" value="9" min="9"
-										max="120" step="1">
-									<input type="range" id="js-amount-range-industryLength" value="9" min="9" max="120" step="1">
+									<input type="number" id="js-amount-input-industryLength" class="input-block__item"
+										value="9" min="9" max="120" step="1">
+									<input type="range" id="js-amount-range-industryLength" value="9" min="9" max="120"
+										step="1">
 								</div>
 							</div>
 
@@ -1898,17 +1914,21 @@
 							<div class="step-form__row">
 								<div class="button-tab button-tab--form-min inputChecked buttonSwitch active"
 									data-check="office-office-building" data-tab="image-office-building">
-									<input type="radio" id="office-office-building" name="type-of-office" value="office-building">
+									<input type="radio" id="office-office-building" name="type-of-office"
+										value="office-building">
 									офис
 								</div>
-								<div class="button-tab button-tab--form-min inputChecked buttonSwitch" data-check="office-shop" data-tab="image-office-shop">
+								<div class="button-tab button-tab--form-min inputChecked buttonSwitch"
+									data-check="office-shop" data-tab="image-office-shop">
 									<input type="radio" id="office-shop" name="type-of-office" value="shop">
 									магазин
 								</div>
 							</div>
 							<div class="step-form__row step-form__row--image">
-								<img src="images/image--granary.png" class="image-building active" id="image-office-building" alt="">
-								<img src="images/image--granary.png" class="image-building" id="image-office-shop" alt="">
+								<img src="images/image--granary.png" class="image-building active"
+									id="image-office-building" alt="">
+								<img src="images/image--granary.png" class="image-building" id="image-office-shop"
+									alt="">
 							</div>
 						</div>
 
@@ -1918,25 +1938,28 @@
 									<header class="input-block__header">
 										Высота стен
 									</header>
-									<input type="number" id="js-amount-input-officeHeight" class="input-block__item" value="3" min="3"
-										max="12" step="0.3">
-									<input type="range" id="js-amount-range-officeHeight" value="3" min="3" max="12" step="0.3">
+									<input type="number" id="js-amount-input-officeHeight" class="input-block__item"
+										value="3" min="3" max="12" step="0.3">
+									<input type="range" id="js-amount-range-officeHeight" value="3" min="3" max="12"
+										step="0.3">
 								</div>
 								<div>
 									<header class="input-block__header">
 										Ширина
 									</header>
-									<input type="number" id="js-amount-input-officeWidth" class="input-block__item" value="3" min="3"
-										max="50" step="1">
-									<input type="range" id="js-amount-range-officeWidth" value="3" min="3" max="50" step="1">
+									<input type="number" id="js-amount-input-officeWidth" class="input-block__item"
+										value="3" min="3" max="50" step="1">
+									<input type="range" id="js-amount-range-officeWidth" value="3" min="3" max="50"
+										step="1">
 								</div>
 								<div>
 									<header class="input-block__header">
 										Длина
 									</header>
-									<input type="number" id="js-amount-input-officeLength" class="input-block__item" value="9" min="9"
-										max="120" step="1">
-									<input type="range" id="js-amount-range-officeLength" value="9" min="9" max="120" step="1">
+									<input type="number" id="js-amount-input-officeLength" class="input-block__item"
+										value="9" min="9" max="120" step="1">
+									<input type="range" id="js-amount-range-officeLength" value="9" min="9" max="120"
+										step="1">
 								</div>
 								<div>
 									<header class="input-block__header">
@@ -1954,11 +1977,12 @@
 
 					</div>
 					<div class="step-form__button">
-						<div class="button-block button-block--opacity">
-							<button class="button button--opacity" name="submit_back">НАЗАД</button>
+						<div class="button-block button-block--opacity nextBackButton">
+							<div class="button button--opacity backMap" name="submit_back">НАЗАД</div>
 						</div>
-						<div class="button-block button-block--big">
-							<button class="button button--big" name="submit_application">ПОДАТЬ ЗАЯВКУ</button>
+						<div class="button-block button-block--big nextBackButton">
+							<div class="button button--big buttonSwitch nextBackButton" name="submit_application"
+								data-tab="step-3" data-active-tab="active-tab-2">Следующий шаг</div>
 						</div>
 					</div>
 				</div>
@@ -1969,17 +1993,22 @@
 					</header>
 
 					<div class="step-form__row">
-						<div class="button-tab button-tab--form button-tab--with-img without-foundation inputChecked buttonSwitch" data-check="without-foundation">
-							<input type="radio" id="without-foundation" name="type-of-foundation" value="without-foundation">
+						<div class="button-tab button-tab--form button-tab--with-img without-foundation inputChecked buttonSwitch"
+							data-check="without-foundation">
+							<input type="radio" id="without-foundation" name="type-of-foundation"
+								value="without-foundation">
 							Без фундамента
 						</div>
-						<div class="button-tab button-tab--form button-tab--with-img strip-foundation inputChecked buttonSwitch" data-check="strip-foundation">
-							<input type="radio" id="strip-foundation" name="type-of-foundation" value="strip-foundation">
+						<div class="button-tab button-tab--form button-tab--with-img strip-foundation inputChecked buttonSwitch"
+							data-check="strip-foundation">
+							<input type="radio" id="strip-foundation" name="type-of-foundation"
+								value="strip-foundation">
 							Ленточный
 						</div>
-						<div class="button-tab button-tab--form button-tab--with-img pile-foundation inputChecked buttonSwitch" data-check="pile-foundation">
+						<div class="button-tab button-tab--form button-tab--with-img pile-foundation inputChecked buttonSwitch"
+							data-check="pile-foundation">
 							<input type="radio" id="pile-foundation" name="type-of-foundation" value="pile-foundation">
-							Свайный 
+							Свайный
 						</div>
 					</div>
 
@@ -1992,16 +2021,365 @@
 						2. Выберете нагрузку на полы
 					</header>
 
-					<div class="step-form__button">
-						<div class="button-block button-block--opacity">
-							<button class="button button--opacity" name="submit_back">НАЗАД</button>
+					<div class="step-form__row">
+						<div class="button-tab button-tab--form button-tab--with-img weight inputChecked buttonSwitch"
+							data-check="one-ton">
+							<input type="radio" id="one-ton" name="floor-load" value="one-ton">
+							До 1 тонны
 						</div>
-						<div class="button-block button-block--big">
-							<button class="button button--big" name="submit_application">ПОДАТЬ ЗАЯВКУ</button>
+						<div class="button-tab button-tab--form button-tab--with-img weight inputChecked buttonSwitch"
+							data-check="two-ton">
+							<input type="radio" id="two-ton" name="floor-load" value="two-ton">
+							До 2х тонн
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img weight inputChecked buttonSwitch"
+							data-check="three-ton">
+							<input type="radio" id="three-ton" name="floor-load" value="three-ton">
+							До 3 тонн
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img weight inputChecked buttonSwitch"
+							data-check="five-ton">
+							<input type="radio" id="five-ton" name="floor-load" value="five-ton">
+							До 5 тонн
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img weight inputChecked buttonSwitch"
+							data-check="ten-ton">
+							<input type="radio" id="ten-ton" name="floor-load" value="ten-ton">
+							До 10 тонн
+						</div>
+					</div>
+
+					<div class="step-form__footnote">
+
+					</div>
+
+					<header class="step-form__header">
+						3. Выберете тип полов
+					</header>
+
+					<div class="step-form__row">
+						<div class="button-tab button-tab--form button-tab--with-img without-foundation inputChecked buttonSwitch"
+							data-check="no-floor">
+							<input type="radio" id="no-floor" name="type-of-floor" value="no-floor">
+							Без пола
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img concrete-mixer inputChecked buttonSwitch"
+							data-check="concrete-floor">
+							<input type="radio" id="concrete-floor" name="type-of-floor" value="concrete-floor">
+							Бетон
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img asphaltroller inputChecked buttonSwitch"
+							data-check="asphalt-floor">
+							<input type="radio" id="asphalt-floor" name="type-of-floor" value="asphalt-floor">
+							Асфальт
+						</div>
+					</div>
+
+					<div class="step-form__footnote"></div>
+
+					<div class="step-form__button">
+						<div class="button-block button-block--opacity buttonSwitch nextBackButton" data-tab="step-2"
+							data-active-tab="active-tab-1">
+							<div class="button button--opacity" name="submit_back">НАЗАД</div>
+						</div>
+						<div class="button-block button-block--big buttonSwitch nextBackButton" data-tab="step-4"
+							data-active-tab="active-tab-3">
+							<div class="button button--big" name="submit_application">Следующий шаг</div>
 						</div>
 					</div>
 				</div>
 
+				<div class="step-form" id="step-4">
+					<header class="step-form__header">
+						1. Выберете обшивку стен
+					</header>
+
+					<div class="step-form__row">
+						<div class="button-tab button-tab--form button-tab--with-img without-foundation inputChecked buttonSwitch"
+							data-check="without-covering">
+							<input type="radio" id="without-covering" name="type-of-wall-cladding"
+								value="without-covering">
+							Без обшивки
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img sandwich-panel inputChecked buttonSwitch"
+							data-check="sandwich-panel">
+							<input type="radio" id="sandwich-panel" name="type-of-wall-cladding" value="sandwich-panel">
+							Сэндвич панели
+						</div>
+					</div>
+
+					<div class="step-form__footnote footnote footnote--dark">
+						Сэндвич панели – это трехслойный материал, сформированный<br>
+						металлическими листами, между которыми уложен утеплитель.
+					</div>
+
+					<header class="step-form__header">
+						2. Уточните наличие кран – балки
+					</header>
+
+					<div class="step-form__row">
+						<div class="button-tab button-tab--form button-tab--with-img without-crane inputChecked buttonSwitch"
+							data-check="without-crane">
+							<input type="radio" id="without-crane" name="type-of-crane" value="without-crane">
+							Без кран – балки
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img crane inputChecked buttonSwitch"
+							data-check="three-ton-crane">
+							<input type="radio" id="three-ton-crane" name="type-of-crane" value="three-ton-crane">
+							3 тонны
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img crane inputChecked buttonSwitch"
+							data-check="five-ton-crane">
+							<input type="radio" id="five-ton-crane" name="type-of-crane" value="five-ton-crane">
+							5 тонн
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img crane inputChecked buttonSwitch"
+							data-check="five-ten-crane">
+							<input type="radio" id="five-ten-crane" name="type-of-crane" value="five-ten-crane">
+							10 тонн
+						</div>
+					</div>
+
+					<div class="step-form__footnote footnote footnote--dark">
+						Сэндвич панели – это трехслойный материал, сформированный<br>
+						металлическими листами, между которыми уложен утеплитель.
+					</div>
+
+					<div class="step-form__button">
+						<div class="button-block button-block--opacity buttonSwitch nextBackButton" data-tab="step-3"
+							data-active-tab="active-tab-2">
+							<div class="button button--opacity" name="submit_back">НАЗАД</div>
+						</div>
+						<div class="button-block button-block--big buttonSwitch nextBackButton" data-tab="step-5"
+							data-active-tab="active-tab-4">
+							<div class="button button--big" name="submit_application">Следующий шаг</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="step-form" id="step-5">
+					<header class="step-form__header">
+						1. Выберете конструкцию кровли
+					</header>
+
+					<div class="step-form__row">
+						<div class="button-tab button-tab--form button-tab--with-img single-stage inputChecked buttonSwitch"
+							data-check="single-stage">
+							<input type="radio" id="single-stage" name="type-of-roof" value="single-stage">
+							Однокаскадная
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img two-stage inputChecked buttonSwitch"
+							data-check="two-stage">
+							<input type="radio" id="two-stage" name="type-of-roof" value="two-stage">
+							Двухкаскадная
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img flat-roof inputChecked buttonSwitch"
+							data-check="flat-roof">
+							<input type="radio" id="flat-roof" name="type-of-roof" value="flat-roof">
+							Плоская
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img arched-roof inputChecked buttonSwitch"
+							data-check="arched-roof">
+							<input type="radio" id="arched-roof" name="type-of-roof" value="arched-roof">
+							Арочная
+						</div>
+					</div>
+
+					<div class="step-form__footnote footnote footnote--dark">
+						Односкатная кровля – это наклонная плоскость, которая опирается на<br>
+						расположенные на различной высоте основные стены
+					</div>
+
+					<header class="step-form__header">
+						2. Выберете обшивку кровли
+					</header>
+
+					<div class="step-form__row">
+						<div class="button-tab button-tab--form button-tab--with-img without-foundation inputChecked buttonSwitch"
+							data-check="without-covering-of-roof">
+							<input type="radio" id="without-covering-of-roof" name="type-of-roof-covering"
+								value="without-covering-of-roof">
+							Без обшивки
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img sandwich-panel inputChecked buttonSwitch"
+							data-check="sandwich-roof-panels">
+							<input type="radio" id="sandwich-roof-panels" name="type-of-roof-covering"
+								value="sandwich-roof-panels">
+							Сэндвич панели
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img flat-roof inputChecked buttonSwitch"
+							data-check="corrugated-sheet-roofing">
+							<input type="radio" id="corrugated-sheet-roofing" name="type-of-roof-covering"
+								value="corrugated-sheet-roofing">
+							Профнастил <span>(холодная)</span>
+						</div>
+						<div class="button-tab button-tab--form button-tab--with-img arched-roof inputChecked buttonSwitch"
+							data-check="membrane-roof">
+							<input type="radio" id="membrane-roof" name="type-of-roof-covering" value="membrane-roof">
+							Мембранная
+						</div>
+					</div>
+
+					<div class="step-form__footnote footnote footnote--dark">
+						Сэндвич панели – это трехслойный материал, сформированный<br>
+						металлическими листами, между которыми уложен утеплитель.
+					</div>
+
+					<div class="step-form__button">
+						<div class="button-block button-block--opacity buttonSwitch nextBackButton" data-tab="step-4"
+							data-active-tab="active-tab-3">
+							<div class="button button--opacity" name="submit_back">НАЗАД</div>
+						</div>
+						<div class="button-block button-block--big buttonSwitch nextBackButton" data-tab="step-6"
+							data-active-tab="active-tab-5">
+							<div class="button button--big" name="submit_application">Следующий шаг</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="step-form step-form--result" id="step-6">
+					<div class="step-form__block-result block-result">
+						<div class="block-result__column">
+							<header class="step-form__header step-form__header--result">
+								1. Размеры и тип сооружения
+							</header>
+							<div class="step-form__text-input">
+								<span>
+									Здания сельхоз назначения
+								</span>
+								<span>
+									Зернохранилище
+								</span>
+							</div>
+						</div>
+						<div class="block-result__column block-result__column--center">
+							<div class="change-button buttonSwitch" data-tab="step-2">
+								Изменить
+							</div>
+						</div>
+
+					</div>
+					<div class="step-form__block-result block-result">
+						<div class="block-result__column">
+							<header class="step-form__header step-form__header--result">
+								2. Кровля
+							</header>
+							<div class="step-form__text-input">
+								<span>
+									Однокаскадная
+								</span>
+								<span>
+									Сэндвич панели
+								</span>
+							</div>
+						</div>
+						<div class="block-result__column block-result__column--center">
+							<div class="change-button buttonSwitch" data-tab="step-3">
+								Изменить
+							</div>
+						</div>
+					</div>
+
+					<div class="step-form__block-result block-result">
+						<div class="block-result__column">
+							<header class="step-form__header step-form__header--result">
+								3. Стены
+							</header>
+							<div class="step-form__text-input">
+								<span>
+									Сэндвич панели
+								</span>
+								<span>
+									Без кран – балки
+								</span>
+							</div>
+						</div>
+						<div class="block-result__column block-result__column--center">
+							<div class="change-button buttonSwitch" data-tab="step-4">
+								Изменить
+							</div>
+						</div>
+
+					</div>
+					<div class="step-form__block-result block-result">
+						<div class="block-result__column">
+							<header class="step-form__header step-form__header--result">
+								4. Фундамент и полы
+							</header>
+							<div class="step-form__text-input">
+								<span>
+									Столбчатые
+								</span>
+								<span>
+									До 1 тонны
+								</span>
+								<span>
+									Стандартный бетон
+								</span>
+							</div>
+						</div>
+						<div class="block-result__column block-result__column--center">
+							<div class="change-button buttonSwitch" data-tab="step-5">
+								Изменить
+							</div>
+						</div>
+
+					</div>
+
+					<div class="step-form__block-result block-result--max-width">
+						<div class="final-block">
+							<div class="final-block__header">
+								Ориентировочная<br>
+								стоимость
+							</div>
+							<div class="final-block__content">
+								<span>
+									1 213 143₽
+								</span>
+								*Полученная сумма не рекламный ход,<br>
+								а максимально приближенный<br>
+								к реальности расчет
+							</div>
+						</div>
+					</div>
+
+					<div class="section section--form section--form-inside-calculator">
+						<header class="section-header section-header--form-inside-calculator">
+							<div class="section-header__text section-header__row">
+								<div class="section__title section__title--row section__title--white">
+									свяжитесь с нами наиболее<br>
+									удобным для вас способом
+								</div>
+								<div class="section__subtitle section__subtitle--row section__subtitle--white">
+									Мы перезвоним и обсудим детали, что бы<br>
+									назвать точную итоговую стоимость
+								</div>
+							</div>
+						</header>
+						<div class="section-form section-form--result">
+
+							<input type="text" name="nameClient" class="name-client name-client--white" placeholder="Ваше имя">
+							<input type="text" name="telOrEmailClient" class="tell-email"
+								placeholder="Телефон или email">
+							<div class="button-block button-block">
+								<button type="submit" class="button button" name="submitContactInfor">
+									отправить
+								</button>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="step-form__button">
+						<div class="button-block button-block--opacity buttonSwitch nextBackButton" data-tab="step-5"
+							data-active-tab="active-tab-4">
+							<div class="button button--opacity" name="submit_back">НАЗАД</div>
+						</div>
+						<div class="button-block button-block--big">
+							<div class="button button--big" name="submit_application">Узнать больше о нас</div>
+						</div>
+					</div>
+				</div>
 
 			</form>
 
@@ -2014,7 +2392,7 @@
 
 
 
-	</div>
+	</section>
 
 	<script src="js/calculatorForm.js"></script>
 </body>

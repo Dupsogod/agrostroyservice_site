@@ -1,7 +1,26 @@
+$('.region').click(function() {
+	$('#step-map').hide();
+	$('#form-calculator').show();
+});
+
+$('.backMap').click(function() {
+	$('#step-map').show();
+	$('#form-calculator').hide();
+});
+
 $('.inputChecked').on('click', function(){
  var inputChecked = $(this).attr('data-check'); 
  $('#' + inputChecked).prop('checked', true);
 })
+
+
+$('.inputChecked').on('click', function(){
+	
+})
+
+if($('.step-form--result').hasClass('active')) {
+	$('.step__footnote').hide();
+};
 
 $('.buttonSwitch').on('click', function(){
  var local_id = $(this).attr('data-tab'); 
@@ -15,6 +34,13 @@ $('.buttonSwitch').on('click', function(){
 		$('#' + local_id).addClass('active');
 	}
 });
+
+$('.nextBackButton').on('click', function() {
+	var activeTab = $(this).attr('data-active-tab'); 
+	if (!$('#' + activeTab).hasClass('active')) {
+		$('#' + activeTab).siblings().removeClass('active');
+		$('#' + activeTab).addClass('active');}
+})
 
 
 // range slider
@@ -39,22 +65,18 @@ $('.input-block div input[type="range"]').rangeslider({
 })
 
 
-//close or open windows inside forms
+// slider switch
 
-$('#agricultural').click(function() {
-	$('#agricultural-form').addClass("open");
-	$('#industry-form').removeClass("open");
-	$('#office-form').removeClass("open");
+$('.tabs .button-tab').on('click', function(){
+	var local_id = $(this).attr('data-tab'); 
+	if (!$(this).hasClass('active')) {
+		$(this).siblings().removeClass('active');
+		$(this).addClass('active');
+	};
+
+	if (!$('#' + local_id).hasClass('active')) {
+		$('#' + local_id).siblings().removeClass('active');
+		$('#' + local_id).addClass('active');
+	}
 });
 
-$('#industry').click(function() {
-	$('#agricultural-form').removeClass("open");
-	$('#industry-form').addClass("open");
-	$('#office-form').removeClass("open");
-});
-
-$('#office').click(function() {
-	$('#agricultural-form').removeClass("open");
-	$('#industry-form').removeClass("open");
-	$('#office-form').addClass("open");
-});
