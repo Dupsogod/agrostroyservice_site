@@ -43,6 +43,14 @@ $('.nextBackButton').on('click', function() {
 })
 
 
+$('.infographics g').click(function () {
+	if (!$(this).hasClass('active')) {
+		$(this).siblings().removeClass('active');
+		$(this).addClass('active');
+	}
+});
+
+
 // range slider
 
 $('.input-block div ').hover(function(){
