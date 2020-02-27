@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Агростройсервис - Главная</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -17,6 +18,40 @@
 </head>
 
 <body>
+
+  <div class="popup-fade">
+		<div class="popup">
+			<div class="section section--form section--form-popup">
+				<div class="popup-close">
+					<span></span>
+				</div>
+				<header class="section-header">
+					<div class="section-header__text section-header__row">
+						<div class="section__subtitle section__subtitle__row">
+							<span>Оставьте свою заявку</span> или звоните<br>
+							по телефону <span>+7 (4712) 745-360</span>
+						</div>
+						<div class="section__title section__title__row">
+							свяжитесь с нами наиболее<br>
+							удобным для вас способом
+						</div>
+					</div>
+				</header>
+				<div class="section-form">
+					<form action="#" name="contactInfo" class="contact-info">
+						<input type="text" name="nameClient" class="name-client" placeholder="Ваше имя">
+						<input type="text" name="telOrEmailClient" class="tell-email" placeholder="Телефон или email">
+						<div class="button-block button-block">
+							<button type="submit" class="button button" name="submitContactInfor">
+								отправить
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>		
+	</div>
+
   <section class="section section--first">
     <header class="header">
       <div class="logo">
@@ -25,6 +60,10 @@
           Агростройсервис
         </div>
       </div>
+
+      <div class="burger">
+				<span></span>
+			</div>
 
       <nav class="header__nav nav-top">
         <div class="nav-top__contact contact">
@@ -55,7 +94,7 @@
           Производим, продаем, строим под ключ
         </div>
       </div>
-      <div class="button-block">
+      <div class="button-block popup-open">
         <button class="button" name="submit_application">ПОДАТЬ ЗАЯВКУ</button>
       </div>
 
@@ -123,6 +162,45 @@
             </div>
           </div>
         </header>
+
+        <div class="footnote-mobil footnote-mobil--dark">
+					Выберите свой регион для детального расчета строительства здания из металлоконструкций под ключ
+				</div>
+
+				<div class="select-mobil" id="selectMobil">
+					<div class="select-mobil__header">
+						Выберите регион
+					</div>
+					<div class="tabs select-mobil__content">
+						<div data-check="Rostov" class="inputChecked select-mobil__option" value="">Ростов-на-Дон</div>
+						<div data-check="Volgograd" class="inputChecked select-mobil__option" value="">Волгоград</div>
+						<div data-check="Orel" class="inputChecked select-mobil__option" value="">Орел</div>
+						<div data-check="Saratov" class="inputChecked select-mobil__option" value="">Саратов</div>
+						<div data-check="Penza" class="inputChecked select-mobil__option" value="">Пенза</div>
+						<div data-check="Ryazan" class="inputChecked select-mobil__option" value="">Рязань</div>
+						<div data-check="Vladimir" class="inputChecked select-mobil__option" value="">Владимир</div>
+						<div data-check="Ivanovo" class="inputChecked select-mobil__option" value="">Иваново</div>
+						<div data-check="Moscow" class="inputChecked select-mobil__option" value="">Москва</div>
+						<div data-check="Yaroslavl" class="inputChecked select-mobil__option" value="">Ярославль</div>
+						<div data-check="Tver" class="inputChecked select-mobil__option" value="">Тверь</div>
+						<div data-check="Kursk" class="inputChecked select-mobil__option" value="">Курск</div>
+						<div data-check="Smolensk" class="inputChecked select-mobil__option" value="">Смоленск</div>
+						<div data-check="Tula" class="inputChecked select-mobil__option" value="">Тула</div>
+						<div data-check="Kaluga" class="inputChecked select-mobil__option" value="">Калуга</div>
+						<div data-check="Saransk" class="inputChecked select-mobil__option" value="">Саранск</div>
+						<div data-check="Bryansk" class="inputChecked select-mobil__option" value="">Брянск</div>
+						<div data-check="Voronezh" class="inputChecked select-mobil__option" value="">Воронеж</div>
+						<div data-check="Lipetsk" class="inputChecked select-mobil__option" value="">Липецк</div>
+						<div data-check="Belgorod" class="inputChecked select-mobil__option" value="">Белгород</div>
+						<div data-check="Tambov" class="inputChecked select-mobil__option" value="">Тамбов</div>
+					</div>
+				</div>
+
+				<div class="button-block button-block--mobile">
+					<div class="button button--mobile region" name="submit_application">
+						Перейти к расчету
+					</div>
+				</div>
 
       </div>
 
@@ -3487,7 +3565,7 @@
 
   </div>
 
-  <section class="section section--form-calculator section--form-calculator-white">
+  <section class="section section--form-calculator section--form-calculator-white section--form-calculator-infographics">
     <div class="section-column">
       <header class="section-header section-header--column section-header--padding">
         <div class="section-header__text">

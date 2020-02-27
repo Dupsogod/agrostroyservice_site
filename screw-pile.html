@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Агростройсервис - Главная</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -17,6 +18,41 @@
 </head>
 
 <body>
+
+  <div class="popup-fade">
+		<div class="popup">
+			<div class="section section--form section--form-popup">
+				<div class="popup-close">
+					<span></span>
+				</div>
+				<header class="section-header">
+					<div class="section-header__text section-header__row">
+						<div class="section__subtitle section__subtitle__row">
+							<span>Оставьте свою заявку</span> или звоните<br>
+							по телефону <span>+7 (4712) 745-360</span>
+						</div>
+						<div class="section__title section__title__row">
+							свяжитесь с нами наиболее<br>
+							удобным для вас способом
+						</div>
+					</div>
+				</header>
+				<div class="section-form">
+					<form action="#" name="contactInfo" class="contact-info">
+						<input type="text" name="nameClient" class="name-client" placeholder="Ваше имя">
+						<input type="text" name="telOrEmailClient" class="tell-email" placeholder="Телефон или email">
+						<div class="button-block button-block">
+							<button type="submit" class="button button" name="submitContactInfor">
+								отправить
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+
   <div class="section section--sixth">
     <header class="header">
       <div class="header__logo logo">
@@ -25,6 +61,10 @@
           Агростройсервис
         </div>
       </div>
+
+      <div class="burger">
+				<span></span>
+			</div>
 
       <nav class="header__nav nav-top">
         <div class="nav-top__contact contact">
@@ -55,7 +95,7 @@
           Любые размеры, быстрая доставка
         </div>
       </div>
-      <div class="button-block">
+      <div class="button-block popup-open">
         <button class="button" name="submit_application">ПОДАТЬ ЗАЯВКУ</button>
       </div>
 
@@ -166,7 +206,7 @@
 
     </div>
 
-    <div class="section__content">
+    <div class="section__content section__content--product-of-the-month">
       <div class="nameplate">
         <div class="nameplate__text nameplate-text">
           <div class="nameplate-text__title">
@@ -470,4 +510,5 @@
   </footer>
 
   <script src="js/calculator.js"></script>
+  <script src="js/calculatorForm.js"></script>
 </body>

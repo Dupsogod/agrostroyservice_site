@@ -10,11 +10,8 @@ var owl = $('.owl-carousel').owlCarousel({
     0: {
       items: 1,
       nav: false,
-      margin: 25
-    },
-    800: {
-      items: 2,
-      nav: false,
+      dotsEach: false,
+      dots: false,
       margin: 25
     },
     1200: {

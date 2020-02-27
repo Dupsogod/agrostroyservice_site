@@ -1,11 +1,13 @@
 $('.region').click(function() {
 	$('#step-map').hide();
 	$('#form-calculator').show();
+	$('.section--form-calculator').addClass('active');
 });
 
 $('.backMap').click(function() {
 	$('#step-map').show();
 	$('#form-calculator').hide();
+	$('.section--form-calculator').removeClass('active');
 });
 
 $('.inputChecked').on('click', function(){
@@ -13,10 +15,9 @@ $('.inputChecked').on('click', function(){
  $('#' + inputChecked).prop('checked', true);
 })
 
-
-$('.inputChecked').on('click', function(){
+/* $('.inputChecked').on('click', function(){
 	
-})
+}) */
 
 if($('.step-form--result').hasClass('active')) {
 	$('.step__footnote').hide();
@@ -87,4 +88,48 @@ $('.tabs .button-tab').on('click', function(){
 		$('#' + local_id).addClass('active');
 	}
 });
+
+// burger {
+	$('.burger').click(function(){
+		$('.burger, .header').toggleClass('active');
+	})
+
+
+	$('.select-mobil__header').click(function(){
+		$('.select-mobil__content').toggleClass('active');
+		$('.select-mobil__option').click(function(){
+			var textOption = $(this).text();
+			$('.select-mobil__header').text(textOption);
+			$('.select-mobil__content').removeClass('active');
+		})
+	})
+
+
+	// popup window 
+
+	$(document).ready(function($) {
+		$('.popup-open').click(function() {
+			$('.popup-fade').fadeIn("slow");
+			return false;
+		});	
+		
+		$('.popup-close').click(function() {
+			$(this).parents('.popup-fade').fadeOut("slow");
+			return false;
+		});		
+	 
+		$(document).keydown(function(e) {
+			if (e.keyCode === 27) {
+				e.stopPropagation();
+				$('.popup-fade').fadeOut("slow");
+			}
+		});
+		
+		$('.popup-fade').click(function(e) {
+			if ($(e.target).closest('.popup').length == 0) {
+				$(this).fadeOut("slow");					
+			}
+		});
+	});
+
 
