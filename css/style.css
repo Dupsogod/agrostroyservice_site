@@ -1370,7 +1370,7 @@ input[type="text"] {
 
 .section-form--result input[type="text"] {
   border: 1px solid rgba(255, 255, 255, 0.4);
-  color: var(--color-dark-3);
+  color: var(--color-light-5);
 }
 
 
