@@ -12,7 +12,8 @@ var owl = $('.owl-carousel').owlCarousel({
       nav: false,
       dotsEach: false,
       dots: false,
-      margin: 25
+      margin: 25,
+      autoHeight:true
     },
     1200: {
       items: 3,
@@ -21,7 +22,7 @@ var owl = $('.owl-carousel').owlCarousel({
       dotsEach: false,
       dots: false,
       margin: 25,
-      nav: false
+      nav: false 
     }
   }
 })

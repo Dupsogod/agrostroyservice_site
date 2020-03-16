@@ -44,7 +44,7 @@ $('.nextBackButton').on('click', function() {
 })
 
 
-$('.infographics g').click(function () {
+$('.infographics g').hover(function () {
 	if (!$(this).hasClass('active')) {
 		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
