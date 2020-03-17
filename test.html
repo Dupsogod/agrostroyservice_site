@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test</title>
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+  <style>
+    .popup_bg {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .popup_new {
+      pointer-events: none;
+    }
+
+    .popup_new::before {
+      content: '';
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .popup_new::after {
+      content: '';
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: red;
+      z-index: 3;
+      cursor: pointer;
+      pointer-events: all;
+    }
+
+    .popup_new_active {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+
+    .popup_new .slide-img {
+      position: relative;
+      display: none;
+      z-index: 2;
+    }
+
+    .popup_new .slide-img.active {
+      position: relative;
+      display: block;
+      width: 800px;
+    }
+
+    .slide-navigation {
+      display: flex;
+      justify-content: center;
+      order: 1;
+    }
+
+    .prev-button,
+    .next-button {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background-color: black;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .close-slide {
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+  </style>
+  <div class="block">
+    <div>
+      <img src="images/image--hangar-001.jpg" class="slide-img" alt="">
+      <img src="images/image--hangar-002.jpg" class="slide-img" alt="">
+      <img src="images/image--hangar-003.jpg" class="slide-img" alt="">
+    </div>
+  </div>
+
+  <script>
+    /* $(document).ready(function () { 
+      var img_obj = document.getElementsByClassName("slide-img");
+      console.log(img_obj);
+      $('body').append('<div class="popup_new"></div>');
+      $(img_obj).clone().appendTo(".popup_new")
+    }) */
+
+    $('.slide-img').on('click', function () {
+      $(this).addClass('active');
+      var img_obj = document.getElementsByClassName("slide-img");
+      //   console.log(img_obj);
+      $('body').append('<div class="popup_bg"><div class="popup_new"></div><div class="slide-navigation"><div class="prev-button"></div><div class="next-button"></div></div></div>');
+      $(img_obj).clone().appendTo(".popup_new")
+      $(".popup_new").addClass("popup_new_active");
+      $('.next-button').click(function (e) {
+        var $current = $('.slide-img.active');
+        $current.removeClass('active');
+        $current.next('.slide-img').addClass('active');
+        if ($current.next().length == 0) {
+          var x = $('.popup_new').children()[0];
+          $(x).addClass('active');
+        }
+      });
+      $('.prev-button').click(function (e) {
+        var $current = $('.slide-img.active');
+        $current.removeClass('active');
+        $current.prev('.slide-img').addClass('active');
+
+        if ($current.prev().length == 0) {
+          var x = $('.popup_new').children().length - 1;
+          x = $('.popup_new').children()[x];
+          $(x).addClass('active');
+        }
+      });
+      $('.popup_new').on('click', function () {
+        $('.slide-img').removeClass('active');
+        $('.popup_bg').remove();
+      })
+    })
+  </script>
+  <script src="js/calculatorForm.js"></script>
+</body>
+
+</html>

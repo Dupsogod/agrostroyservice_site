@@ -4074,7 +4074,7 @@ input.retargeting-form__input {
   cursor:zoom-in;
 }
 
-.popup_new {
+/* .popup_new {
   position: absolute;
   height:100%;
   width:100%;
@@ -4082,9 +4082,9 @@ input.retargeting-form__input {
   left:0;
   display:none;
   text-align:center;
-}
+} */
 
-.popup_bg_new {
+/* .popup_bg_new {
   background:rgba(0,0,0,0.3);
   position:fixed;
   z-index:1;
@@ -4095,7 +4095,7 @@ input.retargeting-form__input {
   width: auto;
   height: auto;
   cursor: zoom-out;
-}
+} */
 
 
 .popup_img_new {
@@ -4131,6 +4131,113 @@ input.retargeting-form__input {
   .owl-carousel.owl-drag .owl-item {
     height: auto;
     display: block;
+  }
+}  
+
+
+.popup_bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.popup_new {
+  pointer-events: none;
+}
+
+.popup_new::before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+
+}
+
+.popup_new::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  cursor: pointer;
+  background-image: url('../images/icon--close.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: all;
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in;
+}
+
+.popup_new:hover::after {
+  transform: rotate(360deg);
+}
+
+.popup_new_active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.popup_new .slide-img {
+  position: relative;
+  display: none;
+  z-index: 2;
+}
+
+.popup_new .slide-img.active {
+  position: relative;
+  display: block;
+  width: 800px;
+}
+
+.slide-navigation {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  order: 1;
+}
+
+.prev-button,
+.next-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/icon--arrow-blue-hover.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.prev-button {
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+.close-slide {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .popup_new .slide-img.active {
+    width: 90vw;
   }
 }  
 
